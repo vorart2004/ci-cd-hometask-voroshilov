@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Клонирование репозитория
-                git 'https://github.com/vorart2004/ci-cd-hometask-voroshilov'
+                git url:'https://github.com/vorart2004/ci-cd-hometask-voroshilov'
             }
         }
         stage('Install Go') {
