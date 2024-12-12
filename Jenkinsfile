@@ -8,6 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Клонирование репозитория
+                checkout main
                 git url:'https://github.com/vorart2004/ci-cd-hometask-voroshilov'
             }
         }
