@@ -1,9 +1,9 @@
 pipeline {
     agent any  // Запуск на любом доступном агенте
-   // environment {
+    environment {
         // Установка переменных среды, если нужно
-     //   GOPATH = "/usr/local/go"  // Путь к Go (если необходимо)
-   // }
+       PATH+EXTRA = "/usr/local/go/bin"
+    }
     stages {
         stage('Checkout') {
             steps {
