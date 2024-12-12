@@ -1,15 +1,15 @@
 pipeline {
     agent any  // Запуск на любом доступном агенте
-    //environment {
+    environment {
         // Установка переменных среды, если нужно
-        //GOPATH = "/usr/local/go"  // Путь к Go (если необходимо)
-    //}
+        GOPATH = "/usr/local/go"  // Путь к Go (если необходимо)
+    }
     stages {
         stage('Checkout') {
             steps {
                 // Клонирование репозитория
-                checkout main
-                git url:'https://github.com/vorart2004/ci-cd-hometask-voroshilov'
+
+                git url:'https://github.com/vorart2004/ci-cd-hometask-voroshilov', branch: 'main'
             }
         }
         stage('Install Go') {
